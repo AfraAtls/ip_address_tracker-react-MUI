@@ -1,0 +1,28 @@
+.results {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 70%;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 12rem auto;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+}
+.content {
+    color: #5978e2;
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 767px) {
+  .list {
+    flex-direction: column;
+  }
+}
