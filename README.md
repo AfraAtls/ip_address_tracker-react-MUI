@@ -1,15 +1,23 @@
-# Getting Started
+## IP Address Tracker
 
-## Available Scripts
+> IP address tracker provides information (IP address, location, timezone and ISP) about any IP address or domain that is provided to it.
 
-In the project directory, you can run:
+![screenshot](./src/assets/images/screenshot.png)
 
-### `npm install`
+## Built With
+- React
+- LeafletJs
+- Material UI
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+$ npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Running the app
+
+```bash
+$ npm start
+```
+

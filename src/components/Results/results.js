@@ -10,7 +10,6 @@ import Typography from '@mui/material/Typography';
 
 
 const Results = ({data}) => {
-    console.log(data)
     return(
     <Box component="div" className="results">
         <List className='list'>

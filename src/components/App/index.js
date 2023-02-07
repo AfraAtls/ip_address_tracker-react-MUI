@@ -8,7 +8,8 @@ import Map from '../Map/map';
 import Header from '../Header/header';
 
 function App() {
-  const [search, setSearch] = useState('') // ensuite on filtrera pour voir si c'est une adresse ip ou un domaine
+  const apiKey = process.env.REACT_APP_API_KEY
+  const [search, setSearch] = useState('')
   const [ipAddress, setIpAddress] = useState('')
   const [domain, setDomain] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -16,7 +17,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`https://geo.ipify.org/api/v2/country,city?apiKey=`)
+      .get(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}`)
       .then(response => setData(response.data))
       .catch((error) => console.error(error.message))
   }, []);
@@ -36,7 +37,7 @@ function App() {
     validateData()
     setIsLoading(true);
     await axios
-      .get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_AG7Ui8Wp00vBp4MvJ6wsTXkbDCH6e&ipAddress=${ipAddress}&domain=${domain}`)
+      .get(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress}&domain=${domain}`)
       .then((response) => {
         setData(response.data)
         setSearch('')
